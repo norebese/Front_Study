@@ -1,0 +1,137 @@
+.header{
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: #212121FF;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-style: solid;
+    border-bottom-color:#4d4d4d;
+}
+.left-section{
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu{
+    height: 24px;
+    margin: 0px 24px;
+}
+
+.youtube-logo{
+    height: 70px;
+}
+
+.middle-section{
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    margin-left: 70px;
+    margin-right: 35px;
+    flex: 1;
+}
+
+.search-button{
+    height: 40px;
+    width: 66px;
+    background: #323232;
+    border: 1px solid #4d4d4d;
+    margin-right: 10px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.search-icon{
+    height: 25px;
+}
+
+.search-bar{
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: #4d4d4d;
+    background-color: #121212;
+    /* 꼭지점은 시계방향 순서로 */
+    border-radius: 20px 0px 0px 20px; 
+    flex: 1;
+}
+
+.voice-search-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #121212;
+    cursor: pointer;
+}
+
+
+.search-button,
+.voice-search-button,
+.upload-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* relateive부여하면 absolute는 이것을 뚫을 수 없음 */
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip{
+   /* absolute = 전체에 적용 */
+    position: absolute;
+    background: gray;
+    color: white;
+    padding: 4px 8px;
+    /* relative로 인해 absolute가 relative로 제한됨, button기준으로 -30 내려오는 것으로 적용 */
+    bottom: -30px;
+    border-radius: 2px;
+    font-size: 12px;
+    /* 선명도 0으로해서 일단 화면에서 안보이게 해줌, 나중에 마우스 대면 천천히 보이게 함 */
+    opacity: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    pointer-events: none;
+    
+}
+/* 한칸 띄고 .toolkit하면 호버 했을때 툴팁안의 css를 실행하라 */
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip{
+    opacity: 1;
+}
+
+.right-section{
+    width: 150px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-user-picture{
+    height: 32px;
+    border-radius: 16px;
+
+}
+.notifications-icon,
+.upload-icon{
+    height: 24px;
+}
+
+.notifications-icon-container{
+    position: relative;
+}
+
+.notifications-count{
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background-color: red;
+    color: white;
+    font-size: 11px;
+    padding: 1px 5px;
+    border-radius: 10px;
+}
