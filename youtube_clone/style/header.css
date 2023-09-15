@@ -5,9 +5,15 @@
     flex-direction: row;
     justify-content: space-between;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+
+
     background-color: #212121FF;
     border-bottom-width: 1px;
-    border-bottom-style: solid;
     border-bottom-style: solid;
     border-bottom-color:#4d4d4d;
 }
@@ -66,7 +72,6 @@
     background-color: #121212;
     cursor: pointer;
 }
-
 
 .search-button,
 .voice-search-button,
@@ -135,3 +140,4 @@
     padding: 1px 5px;
     border-radius: 10px;
 }
+

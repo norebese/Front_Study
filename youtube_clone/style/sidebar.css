@@ -1,0 +1,34 @@
+.sidebar{
+    position: fixed; /*fixed 화면 기준으로 무조건 보여주는 것*/
+    left: 0;
+    top: 55px;
+    bottom: 0px;
+    background: #212121ff;
+    width: 72px;
+    z-index: 200; /*물체가 겹쳤을때 뭐가 먼저 보여줄 것 인지 정해준다, 값이 높으면 앞으로 온다*/
+    padding: 0 4px;
+    padding-top: 5px;
+}
+
+.sidebar-link{
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.sidebar-link:hover{
+    background-color: #4d4d4d;
+}
+
+.sidebar-link img{
+    /*이미지는 세로 가로 둘다 조정하면 깨짐, 비율 유지하도록 하나로 맞춰줘야한다*/
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.sidebar-link div{
+    font-size: 10px;
+}

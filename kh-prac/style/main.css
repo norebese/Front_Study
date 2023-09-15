@@ -1,0 +1,104 @@
+.main{
+    display: flex;
+    margin-top: 100px;
+    padding-top: 50px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    
+    width: 400px;
+    height: 300px;
+    margin: auto;
+}
+
+.logo{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    height: 70px;
+}
+
+.loginid{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10%;
+    margin-top: -80px;
+    width: 400px;
+    height: 300px;
+}
+
+.idbar{
+    border: none;
+    text-align: center;
+    width: 220px;
+}
+.idimage{
+    position: absolute;
+    left: 20px;
+    height: 20px;
+}
+
+.loginpwd{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10%;
+    margin-top: -30px;
+    width: 400px;
+    height: 300px;
+}
+.pwbar{
+    border: none;
+    text-align: center;
+    width: 220px;
+}
+.pwimage{
+    position: absolute;
+    left: 20px;
+    height: 20px;
+}
+
+.loginbutton{
+    position: absolute;
+    bottom: -50px;
+    background-color: #3b84ff;
+    color: white;
+    border-radius: 50px;
+    border-color: aliceblue;
+    height: 35px;
+    width: 350px;
+    left: 10%;
+    cursor: pointer;
+}
+
+.signbutton{
+    position: absolute;
+    bottom: -100px;
+    background-color: #312459;
+    color: white;
+    border-radius: 50px;
+    border-color: aliceblue;
+    height: 35px;
+    width: 350px;
+    left: 10%;
+    cursor: pointer;
+}
+.findid{
+    position: absolute;
+    bottom: -140px;
+    cursor: pointer;
+    font-weight: bold;
+    left: 27%;
+}
+.findipw{
+    position: absolute;
+    bottom: -140px;
+    cursor: pointer;
+    left: 52%;
+    font-weight: bold;
+}
