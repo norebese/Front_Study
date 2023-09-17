@@ -1,0 +1,102 @@
+.header{
+    height: 60px;
+    width:auto;
+    padding-left: 127.5px;
+    padding-right: 127.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.head{
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: medium;
+    padding-top: 10px;  
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.iconset{
+    justify-content: space-between;
+    padding-top: 20px;
+    word-break: keep-all;
+    overflow-x: visible;
+    white-space: nowrap;
+}
+
+.search{
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.hamburger{
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+.header2{
+    height: 60px;
+    width:auto;
+    padding-left: 127.5px;
+    padding-right: 127.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    white-space: nowrap;
+
+}
+.wordset{
+    justify-content: space-between;
+    word-break: keep-all;
+    overflow-x: visible;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+}
+
+.words{
+    
+}
+
+.bar{
+font-size: 20px;
+margin-top: 20px;
+color: gray;
+font-weight: 300;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+.mainword{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
