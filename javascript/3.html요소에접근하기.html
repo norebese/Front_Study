@@ -88,14 +88,16 @@
 <form action="">
     <fieldset>
         <legend>취미</legend>
+        <input type="checkbox" name="hobby1" value="전체선택" id="all" onchange="allcheck()">
+        <label for="all">전체선택</label>
 
-        <input type="checkbox" name="hobby" value="game" id="game">
+        <input type="checkbox" name="hobby" value="game" id="game" onchange="checkBoxTrigger()">
         <label for="game">게임</label>  <!--for은 id매칭시켜주는 역할-->
 
-        <input type="checkbox" name="hobby" value="movie" id="movie">
+        <input type="checkbox" name="hobby" value="movie" id="movie" onchange="checkBoxTrigger()">
         <label for="movie">영화</label>
 
-        <input type="checkbox" name="hobby" value="sports" id="sports">
+        <input type="checkbox" name="hobby" value="sports" id="sports" onchange="checkBoxTrigger()">
         <label for="sports">운동</label>
     </fieldset>
 </form>
@@ -104,6 +106,28 @@
 <button onclick="accessName()">name으로 접근</button>
 
 <script>
+  function allcheck(){
+        const allCheckBox = document.getElementById('all');
+        console.log(allCheckBox.checked)
+
+        let hobbyList = document.getElementsByName('hobby');
+        for (let box of hobbyList){
+            box.checked = allCheckBox.checked;
+        }
+    }
+    function checkBoxTrigger(){
+        let allCheck = true;
+        let hobbyList = document.getElementsByName('hobby');
+        for(let box of hobbyList){
+            if(!box.checked){
+                allCheck = false;
+            }
+        }
+        const allCheckBox = document.getElementById('all');
+        allCheckBox.checked = allCheck;
+
+  }
+
     function accessName(){
         //name속성으로 요소 가져올때, 보통 name은 checkbox,radiobox같이 하나로 묶은것에 씀
         // document.getElementsByName('name속성값') => 선택한 속성값을 가진 요소의 배열을 반환
