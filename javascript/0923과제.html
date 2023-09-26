@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .area2{
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <h1>Practice 1</h1>
+    <fieldset>
+        <legend>취미</legend>
+        <input type="checkbox" name="hobby1" value="전체선택" id="all" onchange="allcheck()">
+        <label for="all">전체선택</label>
+        <input type="checkbox" name="hobby" value="종합" id="allkind" onchange="checkBoxTrigger()">
+        <label for="game">종합</label>
+        <input type="checkbox" name="hobby" value="소설" id="novel" onchange="checkBoxTrigger()">
+        <label for="game">소설</label>
+        <input type="checkbox" name="hobby" value="시/에세이" id="poet" onchange="checkBoxTrigger()">
+        <label for="game">시/에세이</label>
+        <input type="checkbox" name="hobby" value="경제/경영" id="economy" onchange="checkBoxTrigger()">
+        <label for="game">경제/경영</label>
+        <input type="checkbox" name="hobby" value="자기계발" id="study" onchange="checkBoxTrigger()">
+        <label for="game">자기계발</label>
+        <input type="checkbox" name="hobby" value="아동" id="kid" onchange="checkBoxTrigger()">
+        <label for="game">아동</label>
+        <input type="checkbox" name="hobby" value="여행" id="travel" onchange="checkBoxTrigger()">
+        <label for="game">여행</label>
+        <input type="checkbox" name="hobby" value="과학" id="science" onchange="checkBoxTrigger()">
+        <label for="game">과학</label>
+        <input type="checkbox" name="hobby" value="역사/문화" id="history" onchange="checkBoxTrigger()">
+        <label for="game">역사/문화</label>
+        <input type="checkbox" name="hobby" value="외국어" id="languge" onchange="checkBoxTrigger()">
+        <label for="game">외국어</label>
+        <input type="checkbox" name="hobby" value="컴퓨터" id="computer" onchange="checkBoxTrigger()">
+        <label for="game">컴퓨터</label>
+        <input type="checkbox" name="hobby" value="만화" id="comic" onchange="checkBoxTrigger()">
+        <label for="game">만화</label>
+    </fieldset>
+    <br>
+    <button onclick="pratice1()">카테고리 선택</button>
+    <div class="area" id="area1"></div>
+
+    <script>
+        function allcheck(){
+        const allCheckBox = document.getElementById('all');
+
+        let hobbyList = document.getElementsByName('hobby');
+        for (let box of hobbyList){
+            box.checked = allCheckBox.checked;
+        }
+        }
+        function pratice1(){
+        let hobby = document.getElementsByName('hobby');
+
+        const area = document.getElementById('area1');
+        area.innerHTML='';
+
+        for(let checkbox of hobby){
+            if(checkbox.checked){
+                area.innerHTML += checkbox.value+" ";
+            }
+        }
+        }
+        function checkBoxTrigger(){
+        let allCheck = true;
+        let hobbyList = document.getElementsByName('hobby');
+        for(let box of hobbyList){
+            if(!box.checked){
+                allCheck = false;
+            }
+        }
+        const allCheckBox = document.getElementById('all');
+        allCheckBox.checked = allCheck;
+        }
+
+
+    </script>
+<br>
+    
+    <div class="area2">
+        <input id="input" type="number">
+        <select name="a" id="math" onchange="hand(this)">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input id="number" type="number">
+        <button onclick="finish()">=</button>
+        <input id="number" type="number">
+        <!-- <input id="result" type="text"> -->
+    </div>
+    <script>
+        let value;
+        function hand(e){
+        value = e.value;    
+        console.log(value)
+        
+        }
+        function finish(){
+            const first = document.getElementById('input').value
+            const second = document.getElementById('number').value
+            const result = document.getElementById('result')
+            // second.innerHTML += first + e.value +second;
+            console.log(first + value +second)
+             if(value=='+'){
+                result.innerHTML=eval(first+second);
+             }
+            // result.innerHTML+=first + value +second;
+        }
+    </script>
+</body>
+</html>
