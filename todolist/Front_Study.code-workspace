@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../caminar"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Front_Study"
+	}
+}

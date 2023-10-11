@@ -12,19 +12,18 @@
    
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script src="./index2.js"></script>
 
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <div class="main">
-        <header>TodoList</header>
-        <div class="container" id="search-bar">
-            <input type="text" id="search-input" onkeyup="(event.keyCode === 13 ? addTodo() : false)">
+        <h1 >TodoList</h1>
+        <div class="search-bar">
+            <input id="search-input" type="text" onkeyup="addTodo(event)">
             <button onclick="addTodo()">+</button>
         </div>
-        <ul class="todo-list">
-        </ul>
+        <div id="todo-list-view"></div>
     </div>
 </body>
 </html>
